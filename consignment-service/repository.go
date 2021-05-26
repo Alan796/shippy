@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	pb "github.com/Alan796/shippy/consignment-service/proto/consignment"
+	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -25,10 +26,10 @@ func (repo *Repository) Create(ctx context.Context, consignment *pb.Consignment)
 // GetAll 获取所有consignment
 func (repo *Repository) GetAll(ctx context.Context) ([]*pb.Consignment, error) {
 	var consignments []*pb.Consignment
-	cursor, err := repo.collection.Find(ctx, nil, nil)
+	cursor, err := repo.collection.Find(ctx, bson.D{})
 	for cursor.Next(ctx) {
-		var consignment *Consignment
-		if err := cursor.Decode(&consignment); err != nil { // todo &
+		consignment := &Consignment{}
+		if err := cursor.Decode(consignment); err != nil {
 			return nil, err
 		}
 		consignments = append(consignments, UnmarshalConsignment(consignment))

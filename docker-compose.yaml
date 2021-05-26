@@ -17,6 +17,7 @@ services:
       MICRO_REGISTRY: "mdns"
       DB_HOST: "mongodb://datastore:27017"
     depends_on:
+      - vessel-service
       - datastore
 
   vessel-service:
