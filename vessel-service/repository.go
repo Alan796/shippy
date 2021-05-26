@@ -20,7 +20,7 @@ type Repository struct {
 // FindAvailable 查找符合要求的vessel
 func (repo *Repository) FindAvailable(ctx context.Context, spec *pb.Specification) (*pb.Vessel, error) {
 	marshaledSpec := MarshalSpecification(spec)
-	var vessel *Vessel
+	vessel := &Vessel{}
 	filter := bson.D{
 		{
 			"capacity",
