@@ -16,7 +16,7 @@ COPY . .
 RUN go mod download
 
 # 编译我们的二进制文件
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o consignment-service
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o consignment-service *.go
 
 # 在这里，我们第二次使用了FROM，它告诉Docker，我们从这里要开始第二个构建流程
 # 最新版的Linux Alpine。Linux Alpine是一个轻量的Linux发行版，专门为运行容器化的应用而生
