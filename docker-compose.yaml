@@ -6,6 +6,8 @@ services:
     image: consignment-client
     environment:
       MICRO_REGISTRY: "mdns"
+    depends_on:
+      - consignment-service
 
   consignment-service:
     build: ./consignment-service

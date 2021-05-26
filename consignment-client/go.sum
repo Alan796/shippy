@@ -14,6 +14,9 @@ contrib.go.opencensus.io/exporter/ocagent v0.4.12/go.mod h1:450APlNTSR6FrvC3CTRq
 dmitri.shuralyov.com/gpu/mtl v0.0.0-20190408044501-666a987793e9/go.mod h1:H6x//7gZCb22OMCxBHrMx7a5I7Hp++hsVxbQ4BYO7hU=
 github.com/Alan796/shippy/consignment-service v0.0.0-20210524055447-5fce834abd95 h1:Y53rKSLCTDncS00x1C7VIvcM6zQBI80DA7dXW/GDpRs=
 github.com/Alan796/shippy/consignment-service v0.0.0-20210524055447-5fce834abd95/go.mod h1:faEk6J15cozeI6MGSorbVy8btWtwhgqLewLL1BvOaAI=
+github.com/Alan796/shippy/consignment-service v0.0.0-20210526054800-bd5e12b183f4 h1:ssuUzp32taGGAz8VNG6X6Ffl5UXTJ3g/X/GfSeGr/S8=
+github.com/Alan796/shippy/consignment-service v0.0.0-20210526054800-bd5e12b183f4/go.mod h1:faEk6J15cozeI6MGSorbVy8btWtwhgqLewLL1BvOaAI=
+github.com/Alan796/shippy/vessel-service v0.0.0-20210524024257-58af71290456 h1:97bNy40wEutmG/a9lMZu6v5giDtcg8+LQARh2hj53TY=
 github.com/Alan796/shippy/vessel-service v0.0.0-20210524024257-58af71290456/go.mod h1:Dj/UYTEl+TjzYXNIj4y580X1RZn764Pri1pkUNoyDyc=
 github.com/Azure/azure-sdk-for-go v32.4.0+incompatible/go.mod h1:9XXNKU+eRnpl9moKnB4QOLf1HestfXbmab5FXxiDBjc=
 github.com/Azure/go-ansiterm v0.0.0-20170929234023-d6e3b3328b78/go.mod h1:LmzpDX56iTiv29bbRTIsUNlaFfuhWRQBWjQdVyAevI8=
