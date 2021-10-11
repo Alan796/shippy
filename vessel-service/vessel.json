@@ -1,0 +1,8 @@
+{
+  "id": "vessel-1",
+  "capacity": 10,
+  "name": "Titanic",
+  "available": true,
+  "owner_id": "vessel-owner-1",
+  "max_weight": 100000
+}

@@ -57,12 +57,12 @@ type Specification struct {
 
 // Vessel mongodb model
 type Vessel struct {
-	Id        string // todo `json`
-	Capacity  int32
-	Name      string
-	Available bool
-	OwnerId   string
-	MaxWeight int32
+	Id        string `json:"id" bson:"id"`
+	Capacity  int32  `json:"capacity" bson:"capacity"`
+	Name      string `json:"name" bson:"name"`
+	Available bool   `json:"available" bson:"available"`
+	OwnerId   string `json:"owner_id" bson:"owner_id"`
+	MaxWeight int32  `json:"max_weight" bson:"max_weight"`
 }
 
 // MarshalSpecification Specification由pb model转为mongodb model

@@ -32,5 +32,7 @@ WORKDIR /app
 # 而是从一个叫做`builder`的容器中获取。它会从我们起先构建的镜像中
 # 获得已经编译好的文件并引入到这个容器里。
 COPY --from=builder /app/vessel-service .
+# 拷贝json文件
+ADD vessel.json /app/vessel.json
 
 CMD ["./vessel-service"]

@@ -12,6 +12,7 @@ const (
 	defaultHost    = "localhost:27017"
 	dbName         = "shippy"
 	collectionName = "vessels"
+	vesselMockFile = "vessel.json"
 )
 
 func main() {
@@ -34,6 +35,10 @@ func main() {
 
 	collection := mongoClient.Database(dbName).Collection(collectionName)
 	repo := &Repository{collection: collection}
+	// 测试环境mock vessel数据
+	if err := mock(vesselMockFile, repo); err != nil {
+		log.Panic(err)
+	}
 	h := &handler{repo: repo}
 
 	// 注册handler
