@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	pb "github.com/Alan796/shippy/consignment-service/proto/consignment"
 	vesselPb "github.com/Alan796/shippy/vessel-service/proto/vessel"
 	"log"
@@ -19,14 +20,14 @@ func (h *handler) Create(ctx context.Context, req *pb.Consignment, res *pb.Respo
 		Capacity:  int32(len(req.Containers)),
 	})
 	if err != nil {
-		return err
+		return fmt.Errorf("vessel service find available failed: %s", err)
 	}
 	log.Printf("Found vessel: %s \n", vesselResponse.Vessel.Name)
 
 	req.VesselId = vesselResponse.Vessel.Id
 
 	if err := h.repo.Create(ctx, req); err != nil {
-		return err
+		return fmt.Errorf("create consignment failed: %s", err)
 	}
 
 	res.Created = true
