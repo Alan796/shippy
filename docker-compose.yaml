@@ -4,6 +4,8 @@ services:
   consignment-client:
     build: ./consignment-client
     image: consignment-client
+    ports:
+      - 8080:80
     environment:
       MICRO_REGISTRY: "mdns"
     depends_on:
